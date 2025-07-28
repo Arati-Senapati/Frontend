@@ -1,0 +1,91 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    width: 100vw;
+    height: 100vh;
+    background-color: pink;
+    border: 5px solid black;
+}
+.box1{
+    width: 350px;
+    height: 80px;
+    background-color: blue;
+    border-radius: 10px;
+    margin: 10px;
+    position: relative;
+    border: 2px solid black;
+
+    /* animation-name:rightMovement;
+    animation-duration: 5s;
+    animation-iteration-count: 1;
+    animation-delay: 1s;
+    animation-timing-function: cubic-bezier(0.1,0.7,1.0,0.1);
+     animation-direction: alternate; 
+    animation-fill-mode: backwards; */
+    /* @keyframes duration | easing-function | delay |iteration-count | direction | fill-mode | play-state | name */
+    
+    animation: 5s ease-in 1s infinite alternate none running rightMovement;
+}
+@keyframes rightMovement{
+    from{
+        top:0;
+        left: 0;
+    }
+    to{
+        top: 0;
+        left: 1650px;
+    }
+}
+#circle{
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    border-radius: 50px;
+    margin: 10px;
+    position: relative;
+    border: 2px solid black;
+    top: 30%;
+    left: 40%;
+    animation: 10s ease-in-out 0s infinite alternate-reverse none running circleMovement;
+}
+@keyframes circleMovement{
+   0%{
+    top: 0%;
+    left: 5%;
+   }
+   30%{
+    top: 1%;
+    left: 90%;
+   }
+   60%{
+    top: 69%;
+    left: 10%;
+   }
+   100%{
+    top: 70%;
+    left: 90%;  
+   }
+}
+.box2{
+    width: 350px;
+    height: 80px;
+    background-color: blue;
+    border-radius: 10px;
+    margin: 10px;
+    position: relative;
+    border: 2px solid black;
+    animation: leftMovement 5s ease-in 1s infinite alternate none running ;
+}
+@keyframes leftMovement{
+    from{
+        top:650px;
+        left: 1650px;
+    }
+    to{
+        top: 650px;
+        left: 0;
+    }
+}
